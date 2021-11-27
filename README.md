@@ -1,2 +1,5 @@
 # UnityForensicsWatermark
-Real-time forensics watermark generator
+유니티 화면에 워터마크를 박아 유튜브 영상 또는 이미지 캡쳐로부터 정품인지 확인할 수 있는 기능을 제공하는 확장
+
+- Extraction 키를 확보한 서비스 제공자가 유니티 플레이어의 IP 및 포트 확인, 구매자 정보, 시스템 시간 및 프로세스 정보 출력  
+- 비정상적인 경로를 통한 크랙 애플리케이션 배포자 탐지 및 서비스 IP 글로벌 밴, 크랙 앱 사용자 법적대응  
