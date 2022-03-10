@@ -7,6 +7,7 @@ namespace FW
 #endif
 	public sealed class WatermarkedCamera : MonoBehaviour
 	{
+		public bool isEnabled = true;
 		public Watermark watermark;
 		
 		private Material _material;
@@ -16,7 +17,7 @@ namespace FW
 			var shader = Shader.Find("Forensics/WatermarkCamera");
 			if (shader == null)
 			{
-				enabled = false;
+				isEnabled = false;
 				Debug.LogWarning("Shader <i>Forensics/WatermarkCamera</i> not found. Watermark disabled.");
 				return;
 			}
@@ -26,6 +27,8 @@ namespace FW
 
 		private void OnRenderImage(RenderTexture src, RenderTexture dest)
 		{
+			if (!isEnabled) return;
+			
 			BeforeBlit(src);
 			Graphics.Blit(src, dest, _material);
 		}
