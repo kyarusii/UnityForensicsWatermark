@@ -21,6 +21,10 @@ namespace FW
 				Debug.LogWarning("Shader <i>Forensics/WatermarkCamera</i> not found. Watermark disabled.");
 				return;
 			}
+			else
+			{
+				Debug.Log("Successfully found shader <i>Forensics/WatermarkCamera</i>.");
+			}
 			
 			_material = new Material(shader);
 		}
